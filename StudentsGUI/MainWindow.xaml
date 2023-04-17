@@ -1,0 +1,44 @@
+﻿<Window x:Class="StudentsGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentsGUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Button Name="Vis" Content="Vis Studerende" Click="Vis_Click" Margin="20,133,134,54"/>
+        <TextBox Name="NavnText" TextWrapping="Wrap" Text="Navn" Margin="28,50,28,113" Grid.Row="1" />
+        <TextBox Name="IdText" TextWrapping="Wrap" Text="ID" Margin="28,117,28,47" Grid.Row="1"/>
+        <TextBox Name="Input" TextWrapping="Wrap"  Grid.Row="0" Margin="29,44,33,102"  />
+        <Label Content="Skriv id" HorizontalAlignment="Left" Margin="31,10,0,0" VerticalAlignment="Top" Height="29" Width="60" RenderTransformOrigin="0.502,1.765"/>
+        <Label Content="Navn" Margin="28,15,122,167" Grid.Row="1" />
+        <Button Name="Opdater" Grid.Column="2" Content="Opdater" HorizontalAlignment="Left" Margin="34,124,0,0" VerticalAlignment="Top" Height="30" Width="96" Click="Opdater_Click"/>
+        <Button Name="Tilfoej" Grid.Column="2" Content="Tilfoej" HorizontalAlignment="Left" Margin="34,177,0,0" VerticalAlignment="Top" Height="28" Width="96" Click="Tilfoej_Click"/>
+        <TextBox Name="InputNavn" TextWrapping="Wrap"  Grid.Column="2" Margin="34,50,34,109"/>
+        <Label Content="Ny studerende" Grid.Column="2" Margin="18,7,18,169"/>
+        <Button Name ="SletKnap"  Content="Slet" Margin="20,177,134,11" Click="SletKnap_Click"/>
+        <ListBox Name="ListeStuderende"   Grid.Column="1" Margin="12,43,29,54"/>
+        <Label Grid.Column="1" Content="Alle Studerende" HorizontalAlignment="Left" Margin="6,13,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="ListeKurser"   Grid.Column="1" Margin="10,38,10,58" Grid.Row="1"/>
+        <Button x:Name="VisAlleStuderende" Grid.Column="1" Content="Vis alle studerende" HorizontalAlignment="Left" Margin="12,169,0,0" VerticalAlignment="Top" Height="37" Width="113" Click="VisAlleStuderende_Click" />
+        <Button x:Name="Tilfoej_Copy1" Grid.Column="1" Content="Vis alle kurser" HorizontalAlignment="Left" Margin="12,170,0,0" Grid.Row="1" VerticalAlignment="Top" Height="37" Width="113" />
+        <Label Grid.Column="1" Content="Alle Kurser" HorizontalAlignment="Left" Margin="12,7,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+
+
+    </Grid>
+</Window>

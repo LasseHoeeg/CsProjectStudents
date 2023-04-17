@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewData["Title"] = "Students";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Students</title>
+</head>
+<body>
+
+    <p> Test om der er forbindelse</p>
+
+      @*Student 1 er: @Model.StudentId, @Model.Name*@
+      Student 1 er : @ViewBag.Student.Name, @ViewBag.Student.StudentId
+
+
+    
+    @using (Html.BeginForm("Students", "Students"))
+    {
+
+    <label>Søg efter studerende</label>
+
+        @Html.TextBox("StudentId") 
+    <br/>
+
+    @*<label>Studerende navn</label>*@
+
+        @*@Html.TextBox("StudentName") *@
+
+        @if (ViewBag.StudentId != null)
+        {
+           <strong>Studerende navn:</strong> @ViewBag.StudentName
+        }
+
+    <br/>
+
+    <input type="submit" value="Add" /> //Submit går altid efter at ramme en post. Forsøger at ramme en get.
+    //Dog ikke kun det der er problemet.
+    }
+
+
+@*    @using (Html.BeginForm("Index", "Exercise01", FormMethod.Get))
+    {
+
+
+        @Html.DropDownList("Countries") 
+
+
+            <input type="submit"
+value="Show country code">
+
+        @if (ViewBag.CountryCode != null)
+        {
+                            <strong>Country code:</strong> @ViewBag.CountryCode
+        }
+    }
+
+
+@*
+    @using (Html.BeginForm("Index", "Exercise01"))
+    {
+
+    <label>Country</label>
+
+        @Html.TextBox("Country") 
+    <br/>
+
+    <label>Code</label>
+
+        @Html.TextBox("Code")
+    <br/>
+
+    <input type="submit" value="Add" />
+    }*@
+
+
+
+</body>
+</html>
